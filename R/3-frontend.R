@@ -9,8 +9,8 @@
 #'  performance measures based on the variable types of
 #'  \code{var1} and \code{var2}.
 #'
-#' @param var1 A vector representing the first variable to be compared.
-#' @param var2 A vector representing the second variable to be compared.
+#' @param yhat A vector representing the first variable to be compared.
+#' @param y A vector representing the second variable to be compared.
 #' @param use_complete_obs Logical. If \code{TRUE}, the function will use only
 #'  pairwise complete observations. Default is \code{FALSE}.
 #'
@@ -26,7 +26,9 @@
 #' result <- performance(var1, var2, use_complete_obs = TRUE)
 #'
 #' @export
-performance <- function(var1, var2, use_complete_obs = FALSE) {
+performance <- function(yhat, y, use_complete_obs = FALSE) {
+  var1 <- yhat
+  var2 <- y
   var1 <- create_data_object(var1)
   var2 <- create_data_object(var2)
 

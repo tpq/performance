@@ -4,12 +4,12 @@
 \alias{performance}
 \title{Performance Measures for Pairs of Variables}
 \usage{
-performance(var1, var2, use_complete_obs = FALSE)
+performance(yhat, y, use_complete_obs = FALSE)
 }
 \arguments{
-\item{var1}{A vector representing the first variable to be compared.}
+\item{yhat}{A vector representing the first variable to be compared.}
 
-\item{var2}{A vector representing the second variable to be compared.}
+\item{y}{A vector representing the second variable to be compared.}
 
 \item{use_complete_obs}{Logical. If \code{TRUE}, the function will use only
 pairwise complete observations. Default is \code{FALSE}.}
